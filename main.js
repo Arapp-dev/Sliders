@@ -55,7 +55,9 @@ function createDots(){
             showSlider(currentIndex)
             resetAutoPlay()
         })
+        dotsContainer.appendChild(dot)
     })
+    showSlider(currentIndex)
 }
-
+createDots()
 startAutoPlay()
