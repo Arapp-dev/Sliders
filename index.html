@@ -5,9 +5,10 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Slider keren</title>
       <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
    </head>
    <body>
-      <div class="slider-layout">
+      <div class="slider-layout" data-aos="fade-down" data-aos-duration="2000">
         <div class="slider-container">
             <div class="slider active">
                 <img src="img/img1.png" alt="">
@@ -36,5 +37,9 @@
         </div>
       </div>
       <script src="main.js"> </script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
    </body>
 </html>
