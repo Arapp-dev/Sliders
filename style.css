@@ -52,11 +52,21 @@ body{
 .caption h4{
     font-size: 1.5rem;
     margin: 0;
+    transition: all 1s;
     font-weight: bold;
+    opacity: 1;
 }
 .caption p{
     font-size: 1rem;
     margin: 0;
+    opacity: 1;
+    transition: all 1s;
+    transition-delay: 0.5s;
+}
+
+.naik{
+    transform: translateY(50px);
+    opacity: 0;
 }
 
 .nav{
@@ -71,11 +81,12 @@ body{
     padding: 15px;
     cursor: pointer;
     width: 60px;
+    opacity: 0;
     height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.3s , color 0.3s;
+    transition: background-color 0.3s , color 0.3s , opacity 0.3s;
     z-index: 10;
 }
 .nav:hover{

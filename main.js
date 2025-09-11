@@ -1,4 +1,7 @@
+let slidlay = document.querySelector('.slider-container')
 let sliders = document.querySelectorAll('.slider')
+let h4 = document.querySelectorAll('.h')
+let p4 = document.querySelectorAll('.p')
 let dotsContainer = document.querySelector('.dots-container')
 let nextBtn = document.querySelector('.nav.next')
 let prevBtn = document.querySelector('.nav.prev')
@@ -18,8 +21,24 @@ function showSlider(index) {
     if (dotsContainer.children[index]) {
         dotsContainer.children[index].classList.add('active')
     }
-}
+    h4.forEach((h) =>{
+        h.classList.add('naik')
+    })
+    h4[index].classList.remove('naik')
+    p4.forEach((p) =>{
+        p.classList.add('naik')
+    })
+    p4[index].classList.remove('naik')
 
+}
+slidlay.addEventListener('mouseover' , ()=>{
+    nextBtn.style.opacity = "1"
+    prevBtn.style.opacity = "1"
+})
+slidlay.addEventListener('mouseleave' , ()=>{
+    nextBtn.style.opacity = "0"
+    prevBtn.style.opacity = "0"
+})
 function nextSlider() {
     currentIndex = (currentIndex + 1) % sliders.length
     showSlider(currentIndex)
